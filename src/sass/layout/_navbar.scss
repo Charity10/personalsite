@@ -1,4 +1,34 @@
+.navbar  {
+  background-color: white;
+  box-shadow: 3px 3px 5px rgba(0,0,0, 0.1);
+}
+
 .nav-list {
   list-style: none;
+  width: 100%;
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  li{
+    height: 50px;
+    font-size: 3rem;
+    a{
+      height: 100%;
+      text-decoration: none;
+      padding: 0 30px;
+      display: flex;
+      align-items: center;
+      color: black;
+    }
+
+    &:first-child{
+      margin-right: auto;
+    }
+  }
+  & li:not(:first-child) a:hover{
+    text-decoration: underline;
+  }
+
+  
 }
