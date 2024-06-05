@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.navbar {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nav-list {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.nav-list li {
+  height: 10rem;
+  font-size: 3rem;
+}
+.nav-list li a {
+  height: 100%;
+  text-decoration: none;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+.nav-list li:first-child {
+  margin-right: auto;
+}
+.nav-list li:not(:first-child) a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=main.css.map */

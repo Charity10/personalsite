@@ -1,0 +1,23 @@
+#about-section{
+  background-image: linear-gradient(to right bottom, rgba(188, 87, 104, 0.53), rgba(235, 182, 191, 0.671)), url(../../assets/laptop.jpg);
+  background-size: cover;
+  height: 95vh;
+}
+
+.about-info{
+  color: #000;
+  text-align: center;
+  padding-top: 10rem;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.8;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 800px;
+
+  h2{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+

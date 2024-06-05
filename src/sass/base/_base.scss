@@ -10,5 +10,7 @@ html{
 
 body{
   height: 100vh;
+  background-image: linear-gradient(to right bottom, rgba(138, 30, 48, 0.7), rgba(235, 182, 191, 0.6));
+  background-size: cover;
   box-sizing: border-box;
 }
