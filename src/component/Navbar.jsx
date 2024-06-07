@@ -1,49 +1,40 @@
 import { useState } from 'react';
 
 function Navbar() {
-  const [colorChage, setColorChange] = useState(false);
-  const [isActive, setIsActive] = useState('false');
 
-  // hamburger menu
-  const toggleActiveClass = () => {
-    setIsActive(!isActive);
-  }
-  // const removeActive = () => {
-  //   setIsActive(false)
-  // }
+  const [burger_class, setBurgerClass] = useState("burger-bar unclicked")
+  const [menu_class, setMenuClass] = useState("menu hidden")
+  const [isMenuClicked, setIsMenuClicked] = useState(false)
 
-  // change navbar color
-  const changeNavbarColor = () => {
-    if(window.scrollY >= 80) {
-      setColorChange(true);
-    } else {
-      setColorChange(false);
+  const updateMenu = () => {
+    if(!isMenuClicked){
+      setBurgerClass("burger-bar clicked")
+      setMenuClass("menu visible")
     }
+    else {
+      setBurgerClass("burger-bar unclicked")
+      setMenuClass("menu hidden")
+    }
+    setIsMenuClicked(!isMenuClicked)
   }
-  window.addEventListener('scroll', changeNavbarColor);
 
-
-  return (
-     <div classv Name={
-      colorChage ? "navbar colorChange"
-    : "navbar"
-    }>
-      <ul className={isActive ? "nav-list active" : "nav-list"}>
-        <li><a href="#">Mercy Umoh</a></li>
-        <li><a href="#about-section">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Achievment</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-
-      <div className={isActive ? 'hamburger active' : 'hamburger'} onClick={toggleActiveClass}>
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
-
-
+  return(
+    <div style={{width:'100%', height: '100vh'}}>
+      <nav>
+      <div className="burger-menu" onClick={updateMenu}>
+        <div className={burger_class}></div>
+        <div className={burger_class}></div>
+        <div className={burger_class}></div>
       </div>
-     </div>
+    </nav>
+
+    <div className={menu_class}>
+      <ul>
+        <li>Mercy Umoh</li>
+      </ul>
+    </div>
+    </div>
+
   )
 }
 
